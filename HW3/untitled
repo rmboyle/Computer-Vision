@@ -1,0 +1,26 @@
+#include <iostream>
+#include <cmath>
+#include "vision_utilities.h"
+using namespace std;
+
+
+
+
+int main(int argc, char *argv[]) {
+
+	//check for arguments
+	if(argc!=3){
+		cout<<"usage: "<< argv[0] <<" <input image><output image>\n";
+		return -1;
+	}	
+	
+	//name of image
+	const char *inputName = argv[1];
+
+
+	//read in image
+	Image *im = (Image *) malloc(sizeof(Image));
+	readImage(im,inputName);
+	int nCols = getNCols(im);
+	int nRows = getNRows(im);
+}

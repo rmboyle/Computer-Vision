@@ -1,0 +1,25 @@
+HW2 Computer Vision
+Richard Boyle
+rmb2189
+
+Status: COMPLETE
+
+p1.cpp
+	Creates a binary image based on a threshold. The value used for the threshold: 110
+
+p2.cpp
+	Labels the image using the connected component algorithm and union find data structure to find the equivalent labels.
+
+p3.cpp
+	Adds a center dot to the image and a line representing the orientation.
+	Creates a database with each objects characteristics:
+	LABEL x y AREA ORIENTATION eMIN ROUNDNESS 	
+
+p4.cpp
+	Finds the image attributes same from p3.cpp. Compares the database and the image object attributes. 
+
+	CRITERIA: Must be within Roundness, Area, and eMin threshold.
+	Thresholds: 	Roundness: .1
+		    	Area: 250
+		    	eMin: 490000
+

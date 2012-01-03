@@ -1,0 +1,27 @@
+Richard Boyle
+rmb2189
+HW3 Computer Vision
+
+p1.cpp
+
+	The masks that were used were the 3X3 Sobel mask in the X and the Y direction. This gave better results than the regular image gradient initially used.
+
+p2.cpp
+	
+	The ranges possible for theta are from -Pi/2 to Pi/2 and possible rho values are from 0 to the length of the diagonal of the image.
+
+	Resolution chosen 800x800 gave reasonable result and easy to see what was happening in the image.
+
+	The voting scheme was chosen that if for all theta values a point x y converted to rho increased the acumluator array based on an 800x800 scale.
+
+	The edge threshold was 60.
+p3.cpp
+
+	hough_simple_1.pgm threshold: 255
+	hough_simple_2.pgm threshold: 175
+	hough_complex.pgm threshold: 200
+
+p4.cpp
+
+	The algorithm to find line segments takes the hough image and uses the thresholded image. It looks for a local maxima in the hough image and then draws points following a line by looking at the thresholded image. It does not draw the points if there isnt a pixel in the thresholded image along the hough transform line.
+

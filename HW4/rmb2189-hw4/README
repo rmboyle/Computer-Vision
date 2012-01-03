@@ -1,0 +1,32 @@
+Richard Boyle
+rmb2819
+HW4 Programming Assignment
+
+p1
+Outputs a text file sphere.txt with the spheres center coordinates and radius.
+
+p2
+Computes the directions and intensities of the light sources.
+
+Formula for resulting normal vector in 3D coordinate system 
+X,Y are computed by subtracting the max components from the corresponding center components to 
+have it originating at the center of the circle. Z is computed by using the f(x,y) = z where f(x,y) = x^2 + y^2 = r^2
+
+	x = xLightSource - xCenter
+	y = yLightSource - yCenter
+	z = sqrt(r^2 - x^2 - z^2)
+
+It is safe to assume this because they are lambertian objects.
+
+p3
+Computes the binary foreground mask for the object. Makes sure that it is in 3 sources.
+
+p4
+Computes the surface normals and albedo of object by first computing the surface normals then ouptingthat to a normal map image. The surface normals are found by finding the inverse of the Source directions and multiplying with the corresponding intensities. The gradient (p,q) are then found for each pixel as well as the albedo. 
+
+****NOTE: An artifact results and I could not find a way to remove it from my normal and albedo images. I believe this to be a problem in p5 as well.
+
+p5
+Computes the depth of the image using the formula described in the assignment description. Then scales it and creates a depth map. The program uses 4 seed points located on either the sphere of the vase. 
+
+****NOTE: the depth map is somewhat off because of the artifact. If you do it with just 1 seed you can see that depth is close but there is a major descripency because of the artifact caused in p4.

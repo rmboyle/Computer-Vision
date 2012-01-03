@@ -1,0 +1,9 @@
+Richard Boyle
+rmb2819
+HW5 Programming Assignment
+
+The program computes the optical flow of the images with the suggested template size of 7x7 and search window of 40x40.
+
+The template matching approach used is NCC.
+
+The STEP that was chosen was 8 it gave relatively good results and did not take excessively long to compute.
